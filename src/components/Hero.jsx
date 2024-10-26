@@ -12,12 +12,12 @@ export default function Hero() {
 
                 <h1>The money App for Africans.</h1>
                 <p>Make free transfers, enjoy cashless payment
-                     options and earn interest on your savings
+                     options and earn interest on your saving
                       with Kuda</p>
 
                 <Buttons>
-                    <button><FaApple size={20} /> <span>Download on the <br />App store</span></button>
-                    <button><IoLogoGooglePlaystore size={20} /> <span>Download on the <br />Play store</span></button>
+                    <button><FaApple size={20} /> <span>Download on the <br />App Store</span></button>
+                    <button><IoLogoGooglePlaystore size={20} /> <span>Download on the <br />Play Store</span></button>
                 </Buttons>
             </Textdiv>
 
