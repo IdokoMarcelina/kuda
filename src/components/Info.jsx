@@ -28,7 +28,7 @@ const Info = () => {
 
     return(
         <Main>
-        <div className="main">
+        <div className="maincon">
            {cardArray.map((infoo, i)=>(
             <Card key={i}>
             <h1>{infoo.icon} </h1>
@@ -59,4 +59,14 @@ const Main = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; 
+
+    .maincon{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 `
+

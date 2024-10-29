@@ -1,17 +1,26 @@
 import Header from './static/Header'
 import './App.css'
-import Hero from './components/Hero'
-import Info from './components/Info'
+import Personal from '../src/pages/Personal'
+import Business from './pages/Business'
+import Companies from './pages/Companies'
+import Home from './pages/Home'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 
 
 function App() {
 
   return (
     <>
-      <Header/>
-      <Hero/>
-      <Info/>
-     
+      <BrowserRouter>
+        <Header/>
+        <Routes>
+            <Route path = '/' element={<Home/>}/>
+            <Route path = '/business' element={<Business/>}/>
+            <Route path = '/companies' element={<Companies/>}/>
+        </Routes>
+      </BrowserRouter>
+      
     </>
   )
 }

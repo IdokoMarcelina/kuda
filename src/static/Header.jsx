@@ -1,29 +1,46 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoReorderTwo } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import { useState } from "react";
 
 
 
 export default function Header() {
+
+    const [toggle, setToggle] = useState(false)
+    const action = ()=>{
+        setToggle(!toggle)
+    }
+
   return (
+
+    <>
    <Container>
         <LogoNav>
             <Logo>
                 <img src="/kudaNav1.png" alt="" />
             </Logo>
             <Navigations>
-                <nav>
+                    <Link to='/'>
+                    <nav>
                     <span>Personal</span>
                     <IoMdArrowDropdown  />
                 </nav>
+                    </Link>
+                <Link to='/business'>
                 <nav>
                     <span>Business</span>
                     <IoMdArrowDropdown />
                 </nav>
-                <nav>
+                </Link>
+               <Link to='/companies'>
+               <nav>
                     <span>Company</span>
                     <IoMdArrowDropdown />
                 </nav>
+               </Link>
                 <nav>
                     <span>Help</span>
                     <IoMdArrowDropdown />
@@ -45,11 +62,14 @@ export default function Header() {
                 <img src="/flag2.png" alt="" />
             </ConBtn>
 
-            <Ham><IoReorderTwo /></Ham>
+            <Ham onClick={action}><IoReorderTwo /></Ham>
 
         </Buttons>
 
    </Container>
+   {toggle === false ? null : <Sidebar toggle={toggle} setToggle={setToggle} />}
+
+   </>
   )
 }
 
