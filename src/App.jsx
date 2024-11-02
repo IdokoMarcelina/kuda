@@ -1,6 +1,5 @@
 import Header from './static/Header'
 import './App.css'
-import Personal from '../src/pages/Personal'
 import Business from './pages/Business'
 import Companies from './pages/Companies'
 import Home from './pages/Home'
